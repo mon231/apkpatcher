@@ -70,7 +70,7 @@ class ActivitySmaliInjector:
             class_constructor_end_index
         )
 
-        if class_constructor_prologue_index == -1:
+        if class_constructor_prologue_index != -1:
             self.__patch_constructor_with_prologue(injected_code, class_constructor_start_index, class_constructor_end_index)
         else:
             self.__patch_constructor_with_locals(injected_code, class_constructor_start_index, class_constructor_end_index)
